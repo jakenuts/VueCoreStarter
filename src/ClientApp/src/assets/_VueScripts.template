@@ -1,0 +1,25 @@
+@* This page is auto-generated during build of vue/webpack *@
+@model Boolean
+@if (Model)
+{
+   
+    <!-- Vue Styles -->
+    <% for (var i in htmlWebpackPlugin.files.css) {%>
+    <link href="<%= htmlWebpackPlugin.files.css[i] %>" rel="stylesheet">
+    <% } %>
+    <!-- End Vue Styles -->
+}
+else
+{
+    <!-- Vue Scripts : _VueScripts.template -->
+    <% for (var i in htmlWebpackPlugin.files.chunks) {%>
+    <script src="<%= htmlWebpackPlugin.files.chunks[i].entry %>" crossorigin="anonymous"></script>
+    <% } %>
+    <!-- End Vue Scripts -->
+
+    <% if (htmlWebpackPlugin.options.devServer) { %>
+    <!-- Webpack Scripts -->
+    <script src="<%= htmlWebpackPlugin.options.devServer%>/webpack-dev-server.js"></script>
+    <!-- End Webpack Scripts -->
+    <% } %>
+}

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VueCoreStarter", "VueCoreStarter.csproj", "{ADBC8006-0610-4D74-A785-922733DA9AD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADBC8006-0610-4D74-A785-922733DA9AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADBC8006-0610-4D74-A785-922733DA9AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADBC8006-0610-4D74-A785-922733DA9AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADBC8006-0610-4D74-A785-922733DA9AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F201E3C7-6440-4E71-8B40-3CD79ED7A8B9}
+	EndGlobalSection
+EndGlobal

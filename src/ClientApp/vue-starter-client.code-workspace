@@ -1,0 +1,20 @@
+{
+	"folders": [
+        {
+            "name": "ClientApp",
+            "path": ".",
+        },
+        {
+            "name": "ServerApp",
+            "path": "..",                                
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            "**/node_modules": true,
+            "**/bin": true,            
+            "**/obj": true,
+            "ClientApp": true
+        }
+    }
+}

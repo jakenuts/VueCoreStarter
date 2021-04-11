@@ -1,0 +1,36 @@
+# =========================
+# Projects
+# =========================
+
+
+# =========================
+# Dev Tool Artifacts
+# =========================
+*.user
+*.bak
+*.log
+*.suo
+**/.vscode
+**/.vs
+**/desktop.ini
+
+# =========================
+# Build Artifacts
+# =========================
+**/src/**/bin
+**/src/**/obj
+**/src/**/tmp
+
+# =========================
+# External Dependencies
+# =========================
+**/node_modules
+**/bower_components
+**/lib/**/packages
+
+# =========================
+# Operating System Files
+# =========================
+Thumbs.db
+Desktop.ini
+*.lnk

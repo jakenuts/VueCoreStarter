@@ -1,0 +1,24 @@
+﻿@* Alternate layout for vue specific pages if _Layout should remain agnostic *@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>@ViewData["Title"]</title>
+
+    <partial name="_VueScripts" model="true" />
+
+    @await RenderSectionAsync("Head", required: false)
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+            <span id="app"></span>
+        </main>
+    </div>
+
+    <partial name="_VueScripts" model="false" />
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
