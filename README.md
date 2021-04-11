@@ -2,6 +2,20 @@
  
  A template for using ASP.NET Core 3.1 and Vue.js 3 in a 'multi page application'. 
  
+## Setup
+```
+# Server
+cd src
+dotnet build
+dotnet watch run
+
+# Client
+cd src/ClientApp
+npm run watch
+
+Open browser to [http://localhost:5000](http://localhost:5000).
+]
+```
 
 ## Features
 
