@@ -10,7 +10,6 @@
 *.bak
 *.log
 *.suo
-**/.vscode
 **/.vs
 **/desktop.ini
 

@@ -1,0 +1,103 @@
+{
+	"version": "2.0.0",
+	"tasks": [      
+        {
+            "label": "npm: watch",
+            "type": "npm",
+            "script": "watch",
+            "detail": "Build & Watch Vue App",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "isBackground": true,
+            "problemMatcher": [
+                {
+                    "base": "$tsc-watch",
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": "Building for development",
+                        "endsPattern": "No issues found."
+                    }
+                }
+            ]           
+        },
+        {
+            "label": "npm: serve",
+            "type": "npm",
+            "script": "serve",
+            "detail": "Build, Serve & Watch Vue App",
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": [
+                {
+                    "base": "$tsc-watch",
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": "Starting development server",
+                        "endsPattern": "Compiled successfully"
+                    }
+                }
+            ]
+        },
+        {
+            "label": "npm: build",
+            "type": "npm",
+            "script": "build",
+            "detail": "Build Vue App for Release",
+            "group": "build",
+            "isBackground": false,
+            "problemMatcher": "$tsc"
+        },
+        {
+            "label": "dotnet: watch",
+            "command": "dotnet",
+            "type": "process",
+            "options": {
+                "cwd": ".."
+            },
+            "args": [
+                "watch",
+                "run",
+                "${workspaceFolder}/VueCoreStarter.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            //"problemMatcher":"$msCompile",
+            "isBackground": true,
+            "problemMatcher": [
+                {
+                    "base": "$msCompile",
+                    "background": {
+                        "activeOnStart": true,
+                        "beginsPattern": "watch : Started",
+                        "endsPattern": "Content root path"
+                    }
+                }
+            ]
+        
+        },
+        {
+            "label": "start-npmwatch-dotnetwatch",
+            "dependsOn": [
+                "npm: watch",
+                "dotnet: watch",
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "stop-npmwatch-dotnetwatch",
+            "command": "echo ${input:terminate}",
+            "type": "shell",
+            "problemMatcher": []
+        },
+    ],
+    "inputs": [
+        {
+            "id": "terminate",
+            "type": "command",
+            "command": "workbench.action.tasks.terminate",
+            "args": "terminateAll"
+        }
+    ]
+}
