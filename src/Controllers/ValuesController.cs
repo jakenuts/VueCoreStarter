@@ -3,13 +3,11 @@
 
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using NSwag.Annotations;
 
 namespace VueCoreStarter.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-    [OpenApiController("backgrounds")]
+    [ApiController]    
     public class ValuesController : ControllerBase
     {
         [HttpGet]
